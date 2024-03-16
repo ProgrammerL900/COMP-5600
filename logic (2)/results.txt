@@ -1,0 +1,374 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\Laura\Documents\logic>  & 'C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\python.exe' 'c:\Users\Laura\.vscode\extensions\ms-python.python-2024.0.1\pythonFiles\lib\python\debugpy\adapter/../..\debugpy\launcher' '54914' '--' 'c:\Users\Laura\Documents\logic\grader.py' 
+('*', 'CrashedServer(mark)', '=', 'True')
+('*', 'TellTruth(susan)', '=', 'True')
+('*', '(other atoms if any)', '=', 'False')
+========== START TESTING ==========
+----- START PART 1a: Test formula 1a implementation
+You matched the 7 models
+Example model: {'California', 'Rain'}
+----- END PART-----
+
+----- START PART 1b: Test formula 1b implementation
+You matched the 4 models
+Example model: {'Wet', 'Sprinklers'}
+----- END PART-----
+
+----- START PART 1c: Test formula 1c implementation
+You matched the 2 models
+Example model: {'Night'}
+----- END PART-----
+
+----- START PART 2a: Test formula 2a implementation
+You matched the 343 models
+Example model: {'Mother(o3,o2)', 'Mother(o2,o1)', 'Person(o2)', 'Person(o3)', 'Mother(o1,o3)', 'Person(o1)'}
+----- END PART-----
+
+----- START PART 2b: Test formula 2b implementation
+You matched the 169 models
+Example model: {'Child(o2,o1)', 'Child(o1,o3)', 'Child(o2,o3)', 'Person(o3)', 'Person(o1)'}
+----- END PART-----
+
+----- START PART 2c: Test formula 2c implementation
+FAIL: Your formula (Forall($x,Forall($y,And(Implies(Daughter($x,$y),And(Child($x,$y),Female($y))),Implies(And(Child($x,$y),Female($y)),Daughter($x,$y)))))) says the following model is FALSE, but it should be TRUE:
+Your formula (Forall($x,Forall($y,And(Implies(Daughter($x,$y),And(Child($x,$y),Female($y))),Implies(And(Child($x,$y),Female($y)),Daughter($x,$y)))))) says the following model is FALSE, but it should be TRUE:
+('*', 'Parent(o3,o1)', '=', 'True')
+('*', '(other atoms if any)', '=', 'False')
+----- END PART-----
+
+----- START PART 2d: Test formula 2d implementation
+FAIL: Your formula (Forall($x,Forall($z,And(Implies(Grandmother($x,$z),Exists($y,And(And(Female($z),Parent($x,$y)),Parent($y,$z)))),Implies(Exists($y,And(And(Female($z),Parent($x,$y)),Parent($y,$z))),Grandmother($x,$z)))))) says the following model is FALSE, but it should be TRUE:
+Your formula (Forall($x,Forall($z,And(Implies(Grandmother($x,$z),Exists($y,And(And(Female($z),Parent($x,$y)),Parent($y,$z)))),Implies(Exists($y,And(And(Female($z),Parent($x,$y)),Parent($y,$z))),Grandmother($x,$z)))))) says the following model is FALSE, but it should be TRUE:
+('*', 'Child(o3,o2)', '=', 'True')
+('*', '(other atoms if any)', '=', 'False')
+----- END PART-----
+
+----- START PART 3a-0: test implementation of statement 0 for 3a
+You matched the 2 models
+Example model: {'TellTruth(mark)'}
+----- END PART-----
+
+----- START PART 3a-1: test implementation of statement 1 for 3a
+FAIL: Your formula (And(Implies(TellTruth(susan),CrashedServer(nicole)),Implies(CrashedServer(nicole),TellTruth(susan)))) says the following model is FALSE, but it should be TRUE:
+Your formula (And(Implies(TellTruth(susan),CrashedServer(nicole)),Implies(CrashedServer(nicole),TellTruth(susan)))) says the following model is FALSE, but it should be TRUE:
+('*', 'CrashedServer(nicole)', '=', 'True')
+('*', 'TellTruth(john)', '=', 'True')
+('*', '(other atoms if any)', '=', 'False')
+----- END PART-----
+
+----- START PART 3a-2: test implementation of statement 2 for 3a
+FAIL: Your formula (And(Implies(TellTruth(mark),CrashedServer(susan)),Implies(CrashedServer(susan),TellTruth(mark)))) says the following model is FALSE, but it should be TRUE:
+Your formula (And(Implies(TellTruth(mark),CrashedServer(susan)),Implies(CrashedServer(susan),TellTruth(mark)))) says the following model is FALSE, but it should be TRUE:
+('*', 'CrashedServer(susan)', '=', 'True')
+('*', 'TellTruth(nicole)', '=', 'True')
+('*', '(other atoms if any)', '=', 'False')
+----- END PART-----
+
+----- START PART 3a-3: test implementation of statement 3 for 3a
+You matched the 2 models
+Example model: {'TellTruth(susan)'}
+----- END PART-----
+
+----- START PART 3a-4: test implementation of statement 4 for 3a
+You matched the 4 models
+Example model: {'TellTruth(susan)'}
+----- END PART-----
+
+----- START PART 3a-5: test implementation of statement 5 for 3a
+You matched the 4 models
+Example model: {'CrashedServer(susan)'}
+----- END PART-----
+
+----- START PART 3a-all: test implementation of all for 3a
+FAIL: Your formula (And(And(And(And(And(And(Implies(TellTruth(mark),Not(CrashedServer(mark))),Implies(Not(CrashedServer(mark)),TellTruth(mark))),And(Implies(TellTruth(susan),CrashedServer(nicole)),Implies(CrashedServer(nicole),TellTruth(susan)))),And(Implies(TellTruth(mark),CrashedServer(susan)),Implies(CrashedServer(susan),TellTruth(mark)))),And(Implies(TellTruth(nicole),Not(TellTruth(susan))),Implies(Not(TellTruth(susan)),TellTruth(nicole)))),Exists($x,And(TellTruth($x),Forall($y,Implies(Not(Equals($x,$y)),Not(TellTruth($y))))))),Exists($x,And(CrashedServer($x),Forall($y,Implies(Not(Equals($x,$y)),Not(CrashedServer($y)))))))) says the following model is FALSE, but it should be TRUE:
+Your formula (And(And(And(And(And(And(Implies(TellTruth(mark),Not(CrashedServer(mark))),Implies(Not(CrashedServer(mark)),TellTruth(mark))),And(Implies(TellTruth(susan),CrashedServer(nicole)),Implies(CrashedServer(nicole),TellTruth(susan)))),And(Implies(TellTruth(mark),CrashedServer(susan)),Implies(CrashedServer(susan),TellTruth(mark)))),And(Implies(TellTruth(nicole),Not(TellTruth(susan))),Implies(Not(TellTruth(susan)),TellTruth(nicole)))),Exists($x,And(TellTruth($x),Forall($y,Implies(Not(Equals($x,$y)),Not(TellTruth($y))))))),Exists($x,And(CrashedServer($x),Forall($y,Implies(Not(Equals($x,$y)),Not(CrashedServer($y)))))))) says the following model is FALSE, but it should be TRUE:
+('*', 'CrashedServer(mark)', '=', 'True')
+('*', 'TellTruth(susan)', '=', 'True')
+('*', '(other atoms if any)', '=', 'False')
+----- END PART-----
+
+----- START PART 3a-run: test implementation of run for 3a
+>>>>> I learned something.
+Query: TELL[And(Implies(TellTruth(mark),Not(CrashedServer(mark))),Implies(Not(CrashedServer(mark)),TellTruth(mark))), standardized: ['And(Implies(TellTruth(mark),Not(CrashedServer(mark))),Implies(Not(CrashedServer(mark)),TellTruth(mark)))']]
+An example of a model where query is TRUE:
+('*', 'CrashedServer(mark)', '=', 'True')
+('*', 'Object(john)', '=', 'True')
+('*', 'Object(mark)', '=', 'True')
+('*', 'Object(nicole)', '=', 'True')
+('*', 'Object(susan)', '=', 'True')
+('*', '(other atoms if any)', '=', 'False')
+An example of a model where query is FALSE:
+('*', 'Object(john)', '=', 'True')
+('*', 'Object(mark)', '=', 'True')
+('*', 'Object(nicole)', '=', 'True')
+('*', 'Object(susan)', '=', 'True')
+('*', '(other atoms if any)', '=', 'False')
+>>>>> I learned something.
+Query: TELL[And(Implies(TellTruth(susan),CrashedServer(nicole)),Implies(CrashedServer(nicole),TellTruth(susan))), standardized: ['And(Implies(TellTruth(susan),CrashedServer(nicole)),Implies(CrashedServer(nicole),TellTruth(susan)))']]
+An example of a model where query is TRUE:
+('*', 'CrashedServer(mark)', '=', 'True')
+('*', 'Object(john)', '=', 'True')
+('*', 'Object(mark)', '=', 'True')
+('*', 'Object(nicole)', '=', 'True')
+('*', 'Object(susan)', '=', 'True')
+('*', '(other atoms if any)', '=', 'False')
+An example of a model where query is FALSE:
+('*', 'CrashedServer(mark)', '=', 'True')
+('*', 'Object(john)', '=', 'True')
+('*', 'Object(mark)', '=', 'True')
+('*', 'Object(nicole)', '=', 'True')
+('*', 'Object(susan)', '=', 'True')
+('*', 'TellTruth(susan)', '=', 'True')
+('*', '(other atoms if any)', '=', 'False')
+>>>>> I learned something.
+Query: TELL[And(Implies(TellTruth(mark),CrashedServer(susan)),Implies(CrashedServer(susan),TellTruth(mark))), standardized: ['And(Implies(TellTruth(mark),CrashedServer(susan)),Implies(CrashedServer(susan),TellTruth(mark)))']]
+An example of a model where query is TRUE:
+('*', 'CrashedServer(mark)', '=', 'True')
+('*', 'Object(john)', '=', 'True')
+('*', 'Object(mark)', '=', 'True')
+('*', 'Object(nicole)', '=', 'True')
+('*', 'Object(susan)', '=', 'True')
+('*', '(other atoms if any)', '=', 'False')
+An example of a model where query is FALSE:
+('*', 'CrashedServer(mark)', '=', 'True')
+('*', 'CrashedServer(susan)', '=', 'True')
+('*', 'Object(john)', '=', 'True')
+('*', 'Object(mark)', '=', 'True')
+('*', 'Object(nicole)', '=', 'True')
+('*', 'Object(susan)', '=', 'True')
+('*', '(other atoms if any)', '=', 'False')
+>>>>> I learned something.
+Query: TELL[And(Implies(TellTruth(nicole),Not(TellTruth(susan))),Implies(Not(TellTruth(susan)),TellTruth(nicole))), standardized: ['And(Implies(TellTruth(nicole),Not(TellTruth(susan))),Implies(Not(TellTruth(susan)),TellTruth(nicole)))']]
+An example of a model where query is TRUE:
+('*', 'CrashedServer(mark)', '=', 'True')
+('*', 'Object(john)', '=', 'True')
+('*', 'Object(mark)', '=', 'True')
+('*', 'Object(nicole)', '=', 'True')
+('*', 'Object(susan)', '=', 'True')
+('*', 'TellTruth(nicole)', '=', 'True')
+('*', '(other atoms if any)', '=', 'False')
+An example of a model where query is FALSE:
+('*', 'CrashedServer(mark)', '=', 'True')
+('*', 'Object(john)', '=', 'True')
+('*', 'Object(mark)', '=', 'True')
+('*', 'Object(nicole)', '=', 'True')
+('*', 'Object(susan)', '=', 'True')
+('*', '(other atoms if any)', '=', 'False')
+>>>>> I learned something.
+Query: TELL[Exists($x,And(TellTruth($x),Forall($y,Implies(Not(Equals($x,$y)),Not(TellTruth($y)))))), standardized: ['Exists($x,And(TellTruth($x),Forall($y,Implies(Not(Equals($x,$y)),Not(TellTruth($y))))))']]
+An example of a model where query is TRUE:
+('*', 'CrashedServer(mark)', '=', 'True')
+('*', 'Object(john)', '=', 'True')
+('*', 'Object(mark)', '=', 'True')
+('*', 'Object(nicole)', '=', 'True')
+('*', 'Object(susan)', '=', 'True')
+('*', 'TellTruth(nicole)', '=', 'True')
+('*', '(other atoms if any)', '=', 'False')
+An example of a model where query is FALSE:
+('*', 'CrashedServer(mark)', '=', 'True')
+('*', 'Object(john)', '=', 'True')
+('*', 'Object(mark)', '=', 'True')
+('*', 'Object(nicole)', '=', 'True')
+('*', 'Object(susan)', '=', 'True')
+('*', 'TellTruth(john)', '=', 'True')
+('*', 'TellTruth(nicole)', '=', 'True')
+('*', '(other atoms if any)', '=', 'False')
+>>>>> I learned something.
+Query: TELL[Exists($x,And(CrashedServer($x),Forall($y,Implies(Not(Equals($x,$y)),Not(CrashedServer($y)))))), standardized: ['Exists($x,And(CrashedServer($x),Forall($y,Implies(Not(Equals($x,$y)),Not(CrashedServer($y))))))']]
+An example of a model where query is TRUE:
+('*', 'CrashedServer(mark)', '=', 'True')
+('*', 'Object(john)', '=', 'True')
+('*', 'Object(mark)', '=', 'True')
+('*', 'Object(nicole)', '=', 'True')
+('*', 'Object(susan)', '=', 'True')
+('*', 'TellTruth(nicole)', '=', 'True')
+('*', '(other atoms if any)', '=', 'False')
+An example of a model where query is FALSE:
+('*', 'CrashedServer(john)', '=', 'True')
+('*', 'CrashedServer(mark)', '=', 'True')
+('*', 'Object(john)', '=', 'True')
+('*', 'Object(mark)', '=', 'True')
+('*', 'Object(nicole)', '=', 'True')
+('*', 'Object(susan)', '=', 'True')
+('*', 'TellTruth(nicole)', '=', 'True')
+('*', '(other atoms if any)', '=', 'False')
+Yes: ['mark']
+Maybe: []
+No: ['susan', 'john', 'nicole']
+----- END PART-----
+
+----- START PART 4a-0: test implementation of statement 0 for 4a
+----- END PART-----
+
+----- START PART 4a-1: test implementation of statement 1 for 4a
+----- END PART-----
+
+----- START PART 4a-2: test implementation of statement 2 for 4a
+----- END PART-----
+
+----- START PART 4a-3: test implementation of statement 3 for 4a
+----- END PART-----
+
+----- START PART 4a-4: test implementation of statement 4 for 4a
+----- END PART-----
+
+----- START PART 4a-5: test implementation of statement 5 for 4a
+----- END PART-----
+
+----- START PART 4a-all: test implementation of all for 4a
+You matched the 36 models
+Example model: {'Larger(o1,o3)', 'Larger(o2,o1)', 'Larger(o3,o1)', 'Successor(o1,o3)', 'Larger(o3,o3)', 'Larger(o2,o3)', 'Successor(o3,o1)', 'Larger(o2,o2)', 'Successor(o2,o1)', 'Odd(o2)', 'Odd(o3)', 'Even(o1)', 'Larger(o3,o2)', 'Larger(o1,o1)', 'Larger(o1,o2)'}
+----- END PART-----
+
+----- START PART 4a-run: test implementation of run for 4a
+>>>>> I learned something.
+Query: TELL[Forall($x,Exists($y,And(And(Successor($x,$y),Not(Equals($y,$x))),Forall($z,Implies(Not(Equals($y,$z)),Not(Successor($x,$z))))))), standardized: ['Forall($x,Exists($y,And(And(Successor($x,$y),Not(Equals($y,$x))),Forall($z,Implies(Not(Equals($y,$z)),Not(Successor($x,$z)))))))']]
+An example of a model where query is TRUE:
+('*', 'Object(o1)', '=', 'True')
+('*', 'Object(o2)', '=', 'True')
+('*', 'Object(o3)', '=', 'True')
+('*', 'Successor(o1,o3)', '=', 'True')
+('*', 'Successor(o2,o1)', '=', 'True')
+('*', 'Successor(o3,o1)', '=', 'True')
+('*', '(other atoms if any)', '=', 'False')
+An example of a model where query is FALSE:
+('*', 'Object(o1)', '=', 'True')
+('*', 'Object(o2)', '=', 'True')
+('*', 'Object(o3)', '=', 'True')
+('*', '(other atoms if any)', '=', 'False')
+>>>>> I learned something.
+Query: TELL[Forall($x,Or(And(Even($x),Not(Odd($x))),And(Odd($x),Not(Even($x))))), standardized: ['Forall($x,Or(And(Even($x),Not(Odd($x))),And(Odd($x),Not(Even($x)))))']]
+An example of a model where query is TRUE:
+('*', 'Even(o1)', '=', 'True')
+('*', 'Object(o1)', '=', 'True')
+('*', 'Object(o2)', '=', 'True')
+('*', 'Object(o3)', '=', 'True')
+('*', 'Odd(o2)', '=', 'True')
+('*', 'Odd(o3)', '=', 'True')
+('*', 'Successor(o1,o3)', '=', 'True')
+('*', 'Successor(o2,o1)', '=', 'True')
+('*', 'Successor(o3,o1)', '=', 'True')
+('*', '(other atoms if any)', '=', 'False')
+An example of a model where query is FALSE:
+('*', 'Object(o1)', '=', 'True')
+('*', 'Object(o2)', '=', 'True')
+('*', 'Object(o3)', '=', 'True')
+('*', 'Successor(o1,o3)', '=', 'True')
+('*', 'Successor(o2,o1)', '=', 'True')
+('*', 'Successor(o3,o1)', '=', 'True')
+('*', '(other atoms if any)', '=', 'False')
+>>>>> I learned something.
+Query: TELL[Forall($x,Forall($y,Implies(And(Even($x),Successor($x,$y)),Odd($y)))), standardized: ['Forall($x,Forall($y,Implies(And(Even($x),Successor($x,$y)),Odd($y))))']]
+An example of a model where query is TRUE:
+('*', 'Even(o1)', '=', 'True')
+('*', 'Even(o2)', '=', 'True')
+('*', 'Object(o1)', '=', 'True')
+('*', 'Object(o2)', '=', 'True')
+('*', 'Object(o3)', '=', 'True')
+('*', 'Odd(o3)', '=', 'True')
+('*', 'Successor(o1,o3)', '=', 'True')
+('*', 'Successor(o2,o3)', '=', 'True')
+('*', 'Successor(o3,o1)', '=', 'True')
+('*', '(other atoms if any)', '=', 'False')
+An example of a model where query is FALSE:
+('*', 'Even(o1)', '=', 'True')
+('*', 'Even(o2)', '=', 'True')
+('*', 'Object(o1)', '=', 'True')
+('*', 'Object(o2)', '=', 'True')
+('*', 'Object(o3)', '=', 'True')
+('*', 'Odd(o3)', '=', 'True')
+('*', 'Successor(o1,o3)', '=', 'True')
+('*', 'Successor(o2,o1)', '=', 'True')
+('*', 'Successor(o3,o1)', '=', 'True')
+('*', '(other atoms if any)', '=', 'False')
+>>>>> I learned something.
+Query: TELL[Forall($x,Forall($y,Implies(And(Odd($x),Successor($x,$y)),Even($y)))), standardized: ['Forall($x,Forall($y,Implies(And(Odd($x),Successor($x,$y)),Even($y))))']]
+An example of a model where query is TRUE:
+('*', 'Even(o1)', '=', 'True')
+('*', 'Even(o2)', '=', 'True')
+('*', 'Object(o1)', '=', 'True')
+('*', 'Object(o2)', '=', 'True')
+('*', 'Object(o3)', '=', 'True')
+('*', 'Odd(o3)', '=', 'True')
+('*', 'Successor(o1,o3)', '=', 'True')
+('*', 'Successor(o2,o3)', '=', 'True')
+('*', 'Successor(o3,o1)', '=', 'True')
+('*', '(other atoms if any)', '=', 'False')
+An example of a model where query is FALSE:
+('*', 'Even(o1)', '=', 'True')
+('*', 'Object(o1)', '=', 'True')
+('*', 'Object(o2)', '=', 'True')
+('*', 'Object(o3)', '=', 'True')
+('*', 'Odd(o2)', '=', 'True')
+('*', 'Odd(o3)', '=', 'True')
+('*', 'Successor(o1,o3)', '=', 'True')
+('*', 'Successor(o2,o1)', '=', 'True')
+('*', 'Successor(o3,o2)', '=', 'True')
+('*', '(other atoms if any)', '=', 'False')
+>>>>> I learned something.
+Query: TELL[Forall($x,Forall($y,Implies(Successor($x,$y),Larger($y,$x)))), standardized: ['Forall($x,Forall($y,Implies(Successor($x,$y),Larger($y,$x))))']]
+An example of a model where query is TRUE:
+('*', 'Even(o2)', '=', 'True')
+('*', 'Even(o3)', '=', 'True')
+('*', 'Larger(o1,o2)', '=', 'True')
+('*', 'Larger(o1,o3)', '=', 'True')
+('*', 'Larger(o2,o1)', '=', 'True')
+('*', 'Object(o1)', '=', 'True')
+('*', 'Object(o2)', '=', 'True')
+('*', 'Object(o3)', '=', 'True')
+('*', 'Odd(o1)', '=', 'True')
+('*', 'Successor(o1,o2)', '=', 'True')
+('*', 'Successor(o2,o1)', '=', 'True')
+('*', 'Successor(o3,o1)', '=', 'True')
+('*', '(other atoms if any)', '=', 'False')
+An example of a model where query is FALSE:
+('*', 'Even(o2)', '=', 'True')
+('*', 'Even(o3)', '=', 'True')
+('*', 'Object(o1)', '=', 'True')
+('*', 'Object(o2)', '=', 'True')
+('*', 'Object(o3)', '=', 'True')
+('*', 'Odd(o1)', '=', 'True')
+('*', 'Successor(o1,o2)', '=', 'True')
+('*', 'Successor(o2,o1)', '=', 'True')
+('*', 'Successor(o3,o1)', '=', 'True')
+('*', '(other atoms if any)', '=', 'False')
+>>>>> I learned something.
+Query: TELL[Forall($x,Forall($y,Forall($z,Implies(And(Larger($x,$y),Larger($y,$z)),Larger($x,$z))))), standardized: ['Forall($x,Forall($y,Forall($z,Implies(And(Larger($x,$y),Larger($y,$z)),Larger($x,$z)))))']]
+An example of a model where query is TRUE:
+('*', 'Even(o2)', '=', 'True')
+('*', 'Even(o3)', '=', 'True')
+('*', 'Larger(o1,o1)', '=', 'True')
+('*', 'Larger(o1,o2)', '=', 'True')
+('*', 'Larger(o1,o3)', '=', 'True')
+('*', 'Larger(o3,o1)', '=', 'True')
+('*', 'Larger(o3,o2)', '=', 'True')
+('*', 'Larger(o3,o3)', '=', 'True')
+('*', 'Object(o1)', '=', 'True')
+('*', 'Object(o2)', '=', 'True')
+('*', 'Object(o3)', '=', 'True')
+('*', 'Odd(o1)', '=', 'True')
+('*', 'Successor(o1,o3)', '=', 'True')
+('*', 'Successor(o2,o1)', '=', 'True')
+('*', 'Successor(o3,o1)', '=', 'True')
+('*', '(other atoms if any)', '=', 'False')
+An example of a model where query is FALSE:
+('*', 'Even(o2)', '=', 'True')
+('*', 'Even(o3)', '=', 'True')
+('*', 'Larger(o1,o2)', '=', 'True')
+('*', 'Larger(o1,o3)', '=', 'True')
+('*', 'Larger(o2,o1)', '=', 'True')
+('*', 'Object(o1)', '=', 'True')
+('*', 'Object(o2)', '=', 'True')
+('*', 'Object(o3)', '=', 'True')
+('*', 'Odd(o1)', '=', 'True')
+('*', 'Successor(o1,o2)', '=', 'True')
+('*', 'Successor(o2,o1)', '=', 'True')
+('*', 'Successor(o3,o1)', '=', 'True')
+('*', '(other atoms if any)', '=', 'False')
+>>>>> Yes.
+Query: ASK[Forall($x,Exists($y,And(Even($y),Larger($y,$x)))), standardized: ['Forall($x,Exists($y,And(Even($y),Larger($y,$x))))']]
+----- END PART-----

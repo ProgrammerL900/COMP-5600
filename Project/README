@@ -1,7 +1,7 @@
-The purpose of the course projec is to provide students an opportunity to implement numerous **Machine learning models** on a real-world data set.
+The purpose of the course project is to provide students an opportunity to implement numerous **Machine learning models** on a real-world data set.
 Each team will select a multi-class classification problem (at least 3 or more classes) from the 
 Huggingface Dataset Hub. https://huggingface.co/datasets
-
+**This is bold text**	
 a. The dataset can be of the following four types.
 i. Audio
 ii. VISION
